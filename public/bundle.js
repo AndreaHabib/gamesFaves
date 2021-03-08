@@ -540,69 +540,42 @@ __webpack_require__.r(__webpack_exports__);
 var Navbar = function Navbar(_ref) {
   var handleClick = _ref.handleClick,
       isLoggedIn = _ref.isLoggedIn;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    style: {
-      display: 'flex',
-      padding: '10px',
-      paddingTop: '10px'
-    }
-  }, "GamesFAVE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    style: {
-      display: 'flex',
-      justifyContent: 'flex-end'
-    }
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    className: "navbar sticky-top navbar-dark navbar-expand-lg"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "navbar-brand"
+  }, "GameStore"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "navbar-toggler ",
+    type: "button",
+    "data-toggle": "collapse",
+    "data-target": "#navbarNavAltMarkup",
+    "aria-controls": "navbarNavAltMarkup",
+    "aria-expanded": "false",
+    "aria-label": "Toggle navigation"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "navbar-toggler-icon "
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "collapse navbar-collapse",
+    id: "navbarNavAltMarkup"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "navbar-nav ml-auto"
   }, isLoggedIn ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     to: "/home",
-    style: {
-      textDecoration: 'none',
-      fontWeight: 'bold',
-      color: 'white',
-      border: '2px solid whitesmoke',
-      padding: '10px',
-      borderRadius: '13px'
-    }
+    className: "link"
   }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     to: "/favorites",
-    style: {
-      textDecoration: 'none',
-      fontWeight: 'bold',
-      color: 'white',
-      border: '2px solid whitesmoke',
-      padding: '10px',
-      borderRadius: '13px'
-    }
+    className: "link"
   }, "Favorites"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    style: {
-      textDecoration: 'none',
-      fontWeight: 'bold',
-      color: 'white',
-      border: '2px solid whitesmoke',
-      padding: '10px',
-      borderRadius: '13px'
-    },
     href: "#",
-    onClick: handleClick
+    onClick: handleClick,
+    className: "link"
   }, "Logout")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-    style: {
-      textDecoration: 'none',
-      fontWeight: 'bold',
-      color: 'white',
-      border: '2px solid whitesmoke',
-      padding: '10px',
-      borderRadius: '13px'
-    },
-    to: "/login"
+    to: "/login",
+    className: "link"
   }, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-    style: {
-      textDecoration: 'none',
-      fontWeight: 'bold',
-      color: 'white',
-      border: '2px solid whitesmoke',
-      padding: '10px',
-      borderRadius: '13px'
-    },
-    to: "/signup"
-  }, "Sign Up"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
+    to: "/signup",
+    className: "link"
+  }, "Sign Up"))))));
 };
 /**
  * CONTAINER

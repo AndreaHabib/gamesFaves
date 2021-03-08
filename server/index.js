@@ -13,13 +13,20 @@ const socketio = require('socket.io')
 const dotenv = require('dotenv')
 module.exports = app
 
+
+const result = dotenv.config({path: '.env'})
+
+if(result.error) {
+  throw result.error
+}
+
+console.log(result.parsed)
+
 // This is a global Mocha hook, used for resource cleanup.
 // Otherwise, Mocha v4+ never quits after tests.
 if (process.env.NODE_ENV === 'test') {
   after('close the session store', () => sessionStore.stopExpiringSessions())
 }
-
-dotenv.config()
 
 /**
  * In your development environment, you can keep all of your

@@ -19,3 +19,44 @@ form div {
   margin: 1em;
   display: inline-block;
 }
+
+.navbar {
+  text-decoration: none;
+  background-color: black;
+  color: red;
+}
+
+.link.link {
+  color: red !important;
+}
+
+.link.visited {
+  color: red !important;
+}
+
+.link {
+  color: red !important;
+}
+
+.link.active {
+  border: 1px solid red !important;
+  color: black !important;
+  background-color: red !important;
+  border-radius: 1px;
+}
+
+.nav-item:hover {
+  color: red;
+  transition: transform 0.2s;
+  transform: scale(1.09);
+}
+
+.navbar-brand:hover {
+  color: black !important;
+  transition: transform 0.2s;
+  transform: scale(1.1);
+  background-color: red !important;
+  border-radius: 15px !important;
+  padding-left: 5px;
+  padding-right: 5px;
+}

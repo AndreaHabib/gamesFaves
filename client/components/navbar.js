@@ -6,50 +6,32 @@ import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
-    <h1 style={{display: 'flex', padding: '10px', paddingTop: '10px'}}>
-      GamesFAVE
-    </h1>
-    <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
-      {isLoggedIn ? (
+    <nav className="navbar sticky-top navbar-dark navbar-expand-lg">
+      <a className="navbar-brand">GameStore</a>
+      <button className="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon "></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div className="navbar-nav ml-auto">
+        {isLoggedIn ? (
         <div>
           {/* The navbar will show these links after you log in */}
           <Link
             to="/home"
-            style={{
-              textDecoration: 'none',
-              fontWeight: 'bold',
-              color: 'white',
-              border: '2px solid whitesmoke',
-              padding: '10px',
-              borderRadius: '13px'
-            }}
+            className="link"
           >
             Home
           </Link>
           <Link
             to="/favorites"
-            style={{
-              textDecoration: 'none',
-              fontWeight: 'bold',
-              color: 'white',
-              border: '2px solid whitesmoke',
-              padding: '10px',
-              borderRadius: '13px'
-            }}
+            className="link"
           >
             Favorites
           </Link>
           <a
-            style={{
-              textDecoration: 'none',
-              fontWeight: 'bold',
-              color: 'white',
-              border: '2px solid whitesmoke',
-              padding: '10px',
-              borderRadius: '13px'
-            }}
             href="#"
             onClick={handleClick}
+            className="link"
           >
             Logout
           </a>
@@ -58,35 +40,23 @@ const Navbar = ({handleClick, isLoggedIn}) => (
         <div>
           {/* The navbar will show these links before you log in */}
           <Link
-            style={{
-              textDecoration: 'none',
-              fontWeight: 'bold',
-              color: 'white',
-              border: '2px solid whitesmoke',
-              padding: '10px',
-              borderRadius: '13px'
-            }}
             to="/login"
+            className="link"
           >
             Login
           </Link>
           <Link
-            style={{
-              textDecoration: 'none',
-              fontWeight: 'bold',
-              color: 'white',
-              border: '2px solid whitesmoke',
-              padding: '10px',
-              borderRadius: '13px'
-            }}
+      
             to="/signup"
+            className="link"
           >
             Sign Up
           </Link>
         </div>
       )}
+        </div>
+      </div>
     </nav>
-    <hr />
   </div>
 )
 
