@@ -10,10 +10,7 @@ const sessionStore = new SequelizeStore({db})
 const PORT = process.env.PORT || 8080
 const app = express()
 const socketio = require('socket.io')
-const dotenv = require('dotenv')
 module.exports = app
-
-const result = dotenv.config({path: '.env'})
 
 if (result.error) {
   throw result.error
@@ -66,7 +63,7 @@ const createApp = () => {
       secret: process.env.SESSION_SECRET || 'my best friend is Cody',
       store: sessionStore,
       resave: false,
-      saveUninitialized: false
+      saveUninitialized: false,
     })
   )
   app.use(passport.initialize())
