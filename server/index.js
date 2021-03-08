@@ -13,10 +13,9 @@ const socketio = require('socket.io')
 const dotenv = require('dotenv')
 module.exports = app
 
-
 const result = dotenv.config({path: '.env'})
 
-if(result.error) {
+if (result.error) {
   throw result.error
 }
 

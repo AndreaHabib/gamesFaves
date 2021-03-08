@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 
 const db = new Sequelize(
-  "postgres://postgres:Supervinom12@localhost:5432/capstone",
+  'postgres://postgres:Supervinom12@localhost:5432/capstone',
   {
     logging: false
   }
