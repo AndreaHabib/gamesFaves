@@ -1,9 +1,9 @@
 const Sequelize = require('sequelize')
 
 const db = new Sequelize(
-  'postgres://postgres:Supervinom12@localhost:5432/capstone',
+  'postgres://postgres:Supervinom12@ttps://gamefaves123445.herokuapp.com:5432/capstone',
   {
-    logging: false
+    logging: false,
   }
 )
 module.exports = db
